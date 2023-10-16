@@ -77,36 +77,7 @@
       </section>
   </section>
 
-  <!-- Pricing -->
-  <section class="py-16 px-6">
-      <section class="text-center">
-          <h3 class="text-3xl font-bold">Welcome to Juv's Flower Shop</h3>
-          <p class="text-lg">Choose Your best Service</p>
-      </section>
-      <section class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
-          <div class="text-center">
-              <h5 class="text-2xl font-semibold">Basic Service</h5>
-              <hr class="border-2 border-blue-500 my-4">
-              <h1 class="text-4xl font-bold">$99</h1>
-              <p>Flower bouquets carefully crafted with love and attention. We guarantee the freshest flowers at the best prices.</p>
-              <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md mt-4">Get Started</a>
-          </div>
-          <div class="text-center">
-              <h5 class="text-2xl font-semibold">Advanced Service</h5>
-              <hr class="border-2 border-blue-500 my-4">
-              <h1 class="text-4xl font-bold">$199</h1>
-              <p>Elevate your floral experience with our premium selection of flower arrangements. Perfect for any special occasion.</p>
-              <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md mt-4">Get Started</a>
-          </div>
-          <div class="text-center">
-              <h5 class="text-2xl font-semibold">Intermediate Service</h5>
-              <hr class="border-2 border-blue-500 my-4">
-              <h1 class="text-4xl font-bold">$149</h1>
-              <p>Be amazed by our exclusive collection of rare and exotic blooms. These flowers will truly make a statement.</p>
-              <a href="#" class="bg-blue-500 hoverbg-blue-600 text-white font-bold py-2 px-4 rounded-md mt-4">Get Started</a>
-          </div>
-      </section>
-  </section>
+  @include('pricing')
 
   <!-- Call to Action -->
   <section class="py-16 px-6 bg-gray-100">
@@ -124,49 +95,50 @@
   </section>
 
   <!-- Contact Form -->
-  <section class="py-16 px-6 bg-slate-500">
-      <section class="flex flex-col md:flex-row items-center md:items-start">
-          <div class="md:w-1/2 text-center md:text-left bg-blue-300">
-              <h3 class="text-3xl font-bold">Greet Us</h3>
-              <form action="#" method="post" class="mt-6">
-                  <label for="first_name" class="text-sm text-gray-600">Name (Required)</label>
-                  <div class="flex space-x-4">
-                      <div class="w-1/2">
-                          <label for="first_name" class="text-sm">First Name</label>
-                          <input type="text" name="first_name" id="first_name" class="w-full p-2 border border-gray-300 rounded-md">
-                      </div>
-                      <div class="w-1/2">
-                          <label for="last_name" class="text-sm text-gray-600">Last Name</label>
-                          <input type="text" name="last_name" id="last_name" class="w-full p-2 border border-gray-300 rounded-md">
-                      </div>
-                  </div>
-                  <label for="email" class="text-sm text-gray-600">Email (Required)</label>
-                  <input type="email" name="email" id="email" class="w-full p-2 border border-gray-300 rounded-md">
-                  <label for="subject" class="text-sm text-gray-600">Subject (Required)</label>
-                  <input type="text" name="subject" id="subject" class="w-full p-2 border border-gray-300 rounded-md">
-                  <label for="message" class="text-sm text-gray-600">Message (Required)</label>
-                  <textarea name="message" id="message" cols="20" rows="4" class="w-full p-2 border border-gray-300 rounded-md mb-2.5"></textarea>
-                  <a href="#" class="bg-black , hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md ">Send</a>
-              </form>
-          </div>
-          <div class="md:w-1/2 text-center  p-36 md:text-left  bg-red-200 ">
-              <ul>
-                  <li class="flex items-left space-x-4 p-3">
-                      <i class="bi bi-geo-alt-fill text-3xl"></i>
-                      <p class="text-md  font-bold ">123 Demo Street New York, NY 12345</p>
-                  </li>
-                  <li class="flex items-left space-x-4 p-3">
-                      <i class="bi bi-clock-fill text-2xl"></i>
-                      <p class="text-md font-bold ">Monday - Friday 6:30am-11pm</p>
-                  </li>
-                  <li class="flex items-left space-x-4 p-3 ">
-                      <i class="bi bi-telephone-fill text-2xl"></i>
-                      <p class="text-lg  font-bold ">email@example.com (555) 555-5555</p>
-                  </li>
-              </ul>
-          </div>
-      </section>
-  </section>
+  <section class="py-16 px-6 bg-slate-200">
+    <section class="flex flex-col md:flex-row items-center md:items-start">
+        <div class="md:w-1/2 text-center md:text-left mr-4 ">
+            <h3 class="text-4xl font-bold p-4 text-black font-sans ">Greet Us</h3>
+            <form action="{{route('contact')}}" method="post" class="mt-6">
+              @csrf
+                <label for="first_name" class="text-sm text-gray-600">Name (Required)</label>
+                <div class="flex space-x-4">
+                    <div class="w-1/2">
+                        <label for="first_name" class="text-sm">First Name</label>
+                        <input type="text" name="first_name" id="first_name" class="w-full p-2 border border-gray-300 rounded-md">
+                    </div>
+                    <div class="w-1/2">
+                        <label for="last_name" class="text-sm text-gray-600">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" class="w-full p-2 border border-gray-300 rounded-md">
+                    </div>
+                </div>
+                <label for="email" class="text-sm text-gray-600">Email (Required)</label>
+                <input type="email" name="email" id="email" class="w-full p-2 border border-gray-300 rounded-md">
+                <label for="subject" class="text-sm text-gray-600">Subject (Required)</label>
+                <input type="text" name="subject" id="subject" class="w-full p-2 border border-gray-300 rounded-md">
+                <label for="message" class="text-sm text-gray-600">Message (Required)</label>
+                <textarea name="message" id="message" cols="20" rows="4" class="w-full p-2 border border-gray-300 rounded-md "></textarea>
+                <button type="submit"  class="bg-black , hover:bg-blue-600 text-white font-bold py-1.5 px-4 rounded-md ">Send</button>
+            </form>
+        </div>
+        <div class="md:w-1/2 text-center   md:text-left  bg-gray-800 ">
+            <ul>
+                <li class="flex items-left space-x-4 p-12 mb-2.5">
+                    <i class="bi bi-geo-alt-fill text-white text-3xl"></i>
+                    <p class="text-md text-white font-bold text-3xl ">123 Demo Street New York, NY 12345</p>
+                </li>
+                <li class="flex items-left space-x-4 text-white p-12 mb-2">
+                    <i class="bi bi-clock-fill text-3xl"></i>
+                    <p class="text-md text-white font-bold  text-3xl ">Monday - Friday 6:30am-11pm</p>
+                </li>
+                <li class="flex items-left space-x-4 text-white p-12 ">
+                    <i class="bi bi-telephone-fill text-3xl "></i>
+                    <p class="  text-white font-bold text-3xl mb-12 ">email@example.com (555) 555-5555</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>
 
   <!-- Footer -->
   <footer class="text-center py-6">
