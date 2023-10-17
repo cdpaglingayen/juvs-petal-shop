@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: Tahoma;
+    src: url("fonts/tahoma.ttf") format("truetype");
+}
