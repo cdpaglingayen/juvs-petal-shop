@@ -6,7 +6,22 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        colors: {
+            'white': '#ffffff',
+            'gray': '#F5F5F5',
+            'pink': '#ffadeb',
+            'lightpink': '#FDE7E5',
+            'fuschia': '#FF66C4',
+            'violet': '#774362',
+            'lightgray': '#cccccc',
+            'darkgray' : '#343333',
+
+        },
+        extend: {
+            fontFamily: {
+                'tahoma': "Tahoma",
+              },
+        },
     },
     plugins: [],
 };
