@@ -13,7 +13,7 @@
 <body class=" font-tahoma">
 
 
-  
+
     <!-- Navigation Bar -->
     <nav class="flex flex-row justify-between items-center px-10 py-5 shadow bg-fuschia text-white">
         <section class="flex">
@@ -32,7 +32,7 @@
             <a href="https://www.instagram.com/juvs.petals/"><i class="bi bi-instagram text-xl mr-2"></i></a>
             <a href="https://www.facebook.com/JuvsPetalsSanDiego"><i class="bi bi-facebook text-2xl mr-2"></i></a>
             <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU"><i class="bi bi-cart3 text-2xl mr-2"></i></a>
-      
+
         </section>
     </nav>
     <div class="mt-4">
@@ -41,62 +41,62 @@
             @foreach($errors->all() as $error)
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 {{$error}}
-             
+
             </div>
             @endforeach
         </div>
         @endif
 
         @if(session()->has('error'))
-        <div id="alert-2"  class="flex items-center p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+        <div id="alert-2" class="flex items-center p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
             <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
             </svg>
             <span class="sr-only">Info</span>
             <div class="ml-3 text-sm font-medium">
-              A simple info alert with an <a href="#" class="font-semibold underline hover:no-underline">example link</a>. Give it a click if you like.
+                A simple info alert with an <a href="#" class="font-semibold underline hover:no-underline">example link</a>. Give it a click if you like.
             </div>
             <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-2" aria-label="Close">
-              <span class="sr-only">Close</span>
-              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-              </svg>
+                <span class="sr-only">Close</span>
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
             </button>
-          </div>
-            {{session('error')}}
-          
         </div>
-        @endif
+        {{session('error')}}
 
-    
+    </div>
+    @endif
 
-        @if(session()->has('success'))
-        <div id="alert-3" class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-            <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-            </svg>
-            <span class="sr-only">Info</span>
-            <div class="ml-3 text-sm font-medium">
-              A simple info alert with an <a href="#" class="font-semibold underline hover:no-underline">example link</a>. Give it a click if you like.
-            </div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-3" aria-label="Close">
-              <span class="sr-only">Close</span>
-              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-              </svg>
-            </button>
-          </div>
-          
+
+
+    @if(session()->has('success'))
+    <div id="alert-3" class="flex items-center p-4 mb-4 text-white rounded-lg bg-green" role="alert">
+        <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+        </svg>
+        <span class="sr-only">Info</span>
+        <div class="ml-3 text-sm font-medium">
             {{session('success')}}
         </div>
-        @endif
+        <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green text-white rounded-lg focus:ring-2 focus:ring-l p-1.5 hover:bg-lightgreen inline-flex items-center justify-center h-8 w-8 data-dismiss-target=" #alert-3" aria-label="Close">
+            <span class="sr-only">Close</span>
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+        </button>
+    </div>
+
+
+    </div>
+    @endif
     </div>
     <!-- Hero -->
     <section class="py-16 px-6 bg-gray">
-        
+
         <section class="flex flex-col md:flex-row items-center md:items-start justify-between">
             <div class="md:w-1/2 text-center md:text-left px-16 py-20">
-           
+
                 <h3 class="text-5xl font-bold text-fuschia">Discover the Blooms</h3><br>
                 <p class="text-lg">Embrace the beauty with our exquisite collection of handpicked flowers. Each blossom tells a story, and we can't wait to help you find the perfect one for your special occasion</p>
                 <div class="mt-6">
@@ -169,7 +169,7 @@
                 <h3 class="text-4xl font-bold py-4 text-fuschia font-sans ">Greet Us</h3>
                 <form action="{{route('contact')}}" method="post" class="mt-2">
                     @csrf
-                
+
                     <label for="first_name" class="text-sm text-gray-600">Name (Required)</label>
                     <div class="flex space-x-4">
                         <div class="w-1/2">
