@@ -12,6 +12,7 @@
    - `composer i`
    - `npm i`
    - `php artisan key:generate`
+   - `npm run dev`
 
 ## Developers
 
