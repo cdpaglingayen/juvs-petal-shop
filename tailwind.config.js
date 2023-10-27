@@ -15,7 +15,8 @@ module.exports = {
             'violet': '#774362',
             'lightgray': '#cccccc',
             'darkgray' : '#343333',
-
+            'green' : '#2E7D32',
+            'lightgreen' : '66BB6A',
         },
         extend: {
             fontFamily: {
