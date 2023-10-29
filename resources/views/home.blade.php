@@ -133,7 +133,7 @@
                 </div>
             </div>
             <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="images/discover-the-bloom.jpg" alt="flower hero" class="object-cover h-96 w-full rounded-lg shadow-lg">
+                <img src="images/flower1.jpg" alt="flower hero" class="object-cover h-96 w-full rounded-lg shadow-lg">
             </div>
         </section>
     </section>
@@ -143,15 +143,15 @@
         <h3 class="text-3xl font-bold text-center">Experience Nature's Artistry!</h3>
         <section class="grid grid-cols-1 md:grid-cols-3 mt-10">
             <div class="text-center">
-                <img src="images/fl-1.jpg" alt="flower 1" class="mx-auto object-cover w-40 h-40 rounded-full">
+                <img src="images/flower2.jpg" alt="flower 1" class="mx-auto object-cover w-40 h-40 rounded-full">
                 <p class="mt-4 text-lg font-semibold">Welcome to Juv's Blossom Paradise!</p>
             </div>
             <div class="text-center">
-                <img src="images/fl-2.jpg" alt="flower 2" class="mx-auto object-cover w-40 h-40 rounded-full">
+                <img src="images/flower3.jpg" alt="flower 2" class="mx-auto object-cover w-40 h-40 rounded-full">
                 <p class="mt-4 text-lg font-semibold">Check out our Blooming Beauties!</p>
             </div>
             <div class="text-center">
-                <img src="images/fl-3.jpg" alt="flower 3" class="mx-auto object-cover w-40 h-40 rounded-full">
+                <img src="images/flower4.jpg" alt="flower 3" class="mx-auto object-cover w-40 h-40 rounded-full">
                 <p class="mt-4 text-lg font-semibold">Discover the Floral Delights!</p>
             </div>
         </section>
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="images/bloomin-world.jpg" alt="welcome image" class="object-cover h-96 w-full rounded-lg shadow-lg">
+                <img src="images/flower5.jpg" alt="welcome image" class="object-cover h-96 w-full rounded-lg shadow-lg">
             </div>
         </section>
     </section>
@@ -179,10 +179,10 @@
     <section class="py-16 px-6 bg-fuschia">
         <h1 class="text-3xl text-center text-gray">GET READY TO DIVE INTO THE WONDERFUL WORLD OF FLOWERS!</h1>
         <section class=" grid md:grid-cols-4 mt-10 place-items-center">
-            <img src="images/fl-6.jpg" alt="cta image 1" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
-            <img src="images/fl-5.jpg" alt="cta image 2" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
-            <img src="images/fl-4.jpg" alt="cta image 3" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
-            <img src="images/fl-7.jpg" alt="cta image 4" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
+            <img src="images/flower6.jpg" alt="cta image 1" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
+            <img src="images/flower7.jpg" alt="cta image 2" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
+            <img src="images/flower8.jpg" alt="cta image 3" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
+            <img src="images/flower1.jpg" alt="cta image 4" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
         </section>
         <section class="text-center pt-12">
             <a href="#" class="border-2 border-white hover:bg-darkgray hover:border-darkgray hover:text-white text-white font-bold py-2 px-4 rounded-md mx-2">Learn More</a>
