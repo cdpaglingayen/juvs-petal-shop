@@ -1,5 +1,5 @@
 <!-- Pricing -->
-<section class="py-16 px-6">
+<section class="py-16 px-6" id="getstarted">
     <section class="text-center">
         <h3 class="text-5xl font-bold mb-4 text-fuschia">Welcome to Juv's Flower Shop</h3>
         <p class="text-lg">Choose Your best Service</p>
