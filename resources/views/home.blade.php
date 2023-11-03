@@ -24,7 +24,7 @@
                 <ul class="flex space-x-10 text-lg">
                     <li><a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU">Shop</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
+<!--                     <li><a href="#">About</a></li> -->
                     <li><a href="#">Contact</a></li>
                 </ul>
             </section>        
