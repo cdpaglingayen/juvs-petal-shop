@@ -23,9 +23,9 @@
             <section class="hidden lg:block links">
                 <ul class="flex space-x-10 text-lg">
                     <li><a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU">Shop</a></li>
-                    <li><a href="/index.php#getstarted">Services</a></li>
+                    <li><a href="/#getstarted">Services</a></li>
 <!--                     <li><a href="#">About</a></li> -->
-                    <li><a href="/index.php#contact">Contact</a></li>
+                    <li><a href="/#contact">Contact</a></li>
                 </ul>
             </section>        
             <section class="space-x-3 hidden lg:block socials">
