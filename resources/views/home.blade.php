@@ -25,7 +25,7 @@
                     <li><a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU">Shop</a></li>
                     <li><a href="/index.php#getstarted">Services</a></li>
 <!--                     <li><a href="#">About</a></li> -->
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/index.php#contact">Contact</a></li>
                 </ul>
             </section>        
             <section class="space-x-3 hidden lg:block socials">
@@ -195,7 +195,7 @@
     </section>
 
     <!-- Contact Form -->
-    <section class="bg-white">
+    <section class="bg-white" id="contact">
         <section class="flex flex-col md:flex-row items-center md:items-start">
             <div class="pt-4 px-12 md:w-1/2 text-center md:text-left mr-4 ">
                 <h3 class="text-4xl font-bold py-4 text-fuschia font-sans ">Greet Us</h3>
