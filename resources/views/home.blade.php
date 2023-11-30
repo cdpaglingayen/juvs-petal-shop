@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="images/flower5.jpg" alt="welcome image" class="object-cover h-96 w-full rounded-lg shadow-lg">
+                <img src="images/flower1.jpg" alt="flower hero" class="object-cover h-full w-full shadow-lg">
             </div>
         </section>
     </section>
