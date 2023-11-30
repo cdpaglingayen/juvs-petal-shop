@@ -6,66 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.js" defer></script>
     <link href="juvs_petals.ico" rel="icon" type="image/x-icon">
     <title>Juv's Petal Shop</title>
 </head>
 
 <body class=" font-tahoma">
 
+
+
     <!-- Navigation Bar -->
-    <div x-data="{ open: false }">
-        <nav class="flex flex-row justify-between items-center px-10 py-5 shadow bg-fuschia text-white">
-            <section class="flex">
-                <img src="images/juvs-petals.png" alt="juvs petals" class="object-cover h-8 w-8 mr-4">
-                <h3 class="text-2xl font-bold">JUV’S PETALS</h3>
-            </section>
-            <section class="hidden lg:block links">
-                <ul class="flex space-x-10 text-lg">
-                    <li><a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU">Shop</a></li>
-                    <li><a href="/#getstarted">Services</a></li>
-<!--                     <li><a href="#">About</a></li> -->
-                    <li><a href="/#contact">Contact</a></li>
-                </ul>
-            </section>        
-            <section class="space-x-3 hidden lg:block socials">
-                <a href="https://www.instagram.com/juvs.petals/"><i class="bi bi-instagram text-xl mr-2"></i></a>
-                <a href="https://www.facebook.com/JuvsPetalsSanDiego"><i class="bi bi-facebook text-2xl mr-2"></i></a>
-                <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU"><i class="bi bi-cart3 text-2xl mr-2"></i></a>
-            </section>
-
-        <!-- Mobile Menu Icon -->
-        <section class="space-x-3 block lg:hidden">
-                <button @click="open = !open" class="text-2xl text-white">
-                    <i x-bind:class="{ 'bi-list': !open, 'bi-x': open }"></i> <!-- Bootstrap Hamburger Icon -->
-                </button>
-            </section>
-        </nav>
-
-        <!-- Mobile Menu (Initially Hidden) -->
-        <div x-show="open" class="mobile-menu lg:hidden bg-fuschia text-white p-4" id="mobile-menu">
-            <!-- Place your mobile menu items here -->
-            <ul class="text-xl space-y-4">
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li>
-                    <a href="https://www.instagram.com/juvs.petals/"><i class="bi bi-instagram text-xl mr-2"></i></a>
-                    <a href="https://www.facebook.com/JuvsPetalsSanDiego"><i class="bi bi-facebook text-2xl mr-2"></i></a>
-                    <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU"><i class="bi bi-cart3 text-2xl mr-2"></i></a>
-                </li>
+    <nav class="flex flex-row justify-between items-center px-10 py-5 shadow bg-fuschia text-white">
+        <section class="flex">
+            <img src="images/juvs-petals.png" alt="juvs petals" class="object-cover h-8 w-8 mr-4">
+            <h3 class="text-2xl font-bold">JUV’S PETALS</h3>
+        </section>
+        <section>
+            <ul class="flex space-x-10 text-lg">
+                <li><a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU">Shop</a></li>
+                <li><a href="/#getstarted">Services</a></li>
+                <!-- <li><a href="#">About</a></li> -->
+                <li><a href="/#contact">Contact</a></li>
             </ul>
-        </div>
-    </div>
-    <!-- Error Message -->
-    {{-- TODO: Fix the error message alert if possible just in case --}}
-    <div class="mt-4">
+        </section>
+        <section class="space-x-3">
+            <a href="https://www.instagram.com/juvs.petals/"><i class="bi bi-instagram text-xl mr-2"></i></a>
+            <a href="https://www.facebook.com/JuvsPetalsSanDiego"><i class="bi bi-facebook text-2xl mr-2"></i></a>
+            <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU"><i class="bi bi-cart3 text-2xl mr-2"></i></a>
+
+        </section>
+    </nav>
+    
+    <!-- <div class="mt-4"> -->
+    <div>
         @if($errors->any())
         <div class="col-12">
             @foreach($errors->all() as $error)
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 {{$error}}
+
             </div>
             @endforeach
         </div>
@@ -88,33 +66,33 @@
             </button>
         </div>
         {{session('error')}}
+
     </div>
     @endif
 
-    <!-- Success Message -->
     @if(session()->has('success'))
     <div id="alert-3" class="flex items-center p-4 mb-4 text-white rounded-lg bg-green dark:bg-gray-800 dark:text-green-400" role="alert">
         <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
         </svg>
         <span class="sr-only">Info</span>
         <div class="ml-3 text-sm font-medium">
-        {{session('success')}}
+            {{session('success')}}
         </div>
         <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green text-white rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-3" aria-label="Close">
             <span class="sr-only">Close</span>
             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
             </svg>
         </button>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const closeButton = document.querySelector('[data-dismiss-target="#alert-3"]');
             const alert = document.getElementById('alert-3');
 
             if (closeButton && alert) {
-                closeButton.addEventListener('click', function () {
+                closeButton.addEventListener('click', function() {
                     alert.style.display = 'none';
                 });
             }
@@ -124,7 +102,7 @@
 
     </div>
     <!-- Hero -->
-    <section class="py-16 px-6 bg-gray">
+    <section class="bg-gray">
 
         <section class="flex flex-col md:flex-row items-center md:items-start justify-between">
             <div class="md:w-1/2 text-center md:text-left px-16 py-20">
@@ -132,12 +110,12 @@
                 <h3 class="text-5xl font-bold text-fuschia">Discover the Blooms</h3><br>
                 <p class="text-lg">Embrace the beauty with our exquisite collection of handpicked flowers. Each blossom tells a story, and we can't wait to help you find the perfect one for your special occasion</p>
                 <div class="mt-6">
-                    <a href="#" class="bg-fuschia border-2 border-fuschia hover:bg-darkgray hover:border-darkgray text-white font-bold py-2 px-4 rounded-md sm:py-1 sm:px-2">Learn More</a>
-                    <a href="#" class="border-2 border-fuschia hover:bg-darkgray hover:border-darkgray hover:text-white text-darkgray font-bold py-2 px-4 rounded-md ml-4 sm:py-1 sm:px-2 sm:ml-2">Shop Now</a>
+                    <a href="#" class="bg-fuschia border-2 border-fuschia hover:bg-darkgray hover:border-darkgray text-white font-bold py-2 px-4 rounded-md">Learn More</a>
+                    <a href="#" class="border-2 border-fuschia hover:bg-darkgray hover:border-darkgray hover:text-white text-darkgray font-bold py-2 px-4 rounded-md ml-4">Shop Now</a>
                 </div>
             </div>
             <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="images/flower1.jpg" alt="flower hero" class="object-cover h-96 w-full rounded-lg shadow-lg">
+                <img src="images/flower1.jpg" alt="flower hero" class="object-cover h-full w-full shadow-lg">
             </div>
         </section>
     </section>
@@ -180,13 +158,13 @@
     @include('pricing')
 
     <!-- Call to Action -->
-    <section class="py-16 px-6 bg-fuschia">
+    <section class="py-16 pr-6 bg-fuschia">
         <h1 class="text-3xl text-center text-gray">GET READY TO DIVE INTO THE WONDERFUL WORLD OF FLOWERS!</h1>
         <section class=" grid md:grid-cols-4 mt-10 place-items-center">
-            <img src="images/flower6.jpg" alt="cta image 1" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
-            <img src="images/flower7.jpg" alt="cta image 2" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
-            <img src="images/flower8.jpg" alt="cta image 3" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
-            <img src="images/flower1.jpg" alt="cta image 4" class="object-cover w-64 h-48 rounded-xl border-8 border-white">
+            <img src="images/flower6.jpg" alt="cta image 1" class="object-cover w-full h-full pl-6">
+            <img src="images/flower7.jpg" alt="cta image 2" class="object-cover w-full h-full pl-6">
+            <img src="images/flower8.jpg" alt="cta image 3" class="object-cover w-full h-full pl-6">
+            <img src="images/flower1.jpg" alt="cta image 4" class="object-cover w-full h-full pl-6">
         </section>
         <section class="text-center pt-12">
             <a href="#" class="border-2 border-white hover:bg-darkgray hover:border-darkgray hover:text-white text-white font-bold py-2 px-4 rounded-md mx-2">Learn More</a>
@@ -198,7 +176,7 @@
     <section class="bg-white" id="contact">
         <section class="flex flex-col md:flex-row items-center md:items-start">
             <div class="pt-4 px-12 md:w-1/2 text-center md:text-left mr-4 ">
-                <h3 class="text-4xl font-bold py-4 text-fuschia font-sans ">Greet Us</h3>
+                <h3 class="text-4xl font-bold py-4 text-fuschia font-sans ">Get Started</h3>
                 <form action="{{route('contact')}}" method="post" class="mt-2">
                     @csrf
 
@@ -248,4 +226,3 @@
 </body>
 
 </html>
-
