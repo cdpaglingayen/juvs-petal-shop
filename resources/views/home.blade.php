@@ -6,35 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.js" defer></script>
     <link href="juvs_petals.ico" rel="icon" type="image/x-icon">
     <title>Juv's Petal Shop</title>
 </head>
 
-<body class=" font-tahoma">
+<body class="font-tahoma">
 
 
 
-    <!-- Navigation Bar -->
-    <nav class="flex flex-row justify-between items-center px-10 py-5 shadow bg-fuschia text-white">
-        <section class="flex">
-            <img src="images/juvs-petals.png" alt="juvs petals" class="object-cover h-8 w-8 mr-4">
-            <h3 class="text-2xl font-bold">JUV’S PETALS</h3>
-        </section>
-        <section>
-            <ul class="flex space-x-10 text-lg">
+     <!-- Navigation Bar -->
+     <div x-data="{ open: false }">
+        <nav class="flex flex-row justify-between items-center px-10 py-5 shadow bg-fuschia text-white">
+            <section class="flex">
+                <img src="images/juvs-petals.png" alt="juvs petals" class="object-cover h-8 w-8 mr-4">
+                <h3 class="text-2xl font-bold">JUV’S PETALS</h3>
+            </section>
+            <section class="hidden lg:block links">
+                <ul class="flex space-x-10 text-lg">
+                    <li><a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU">Shop</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </section>        
+            <section class="space-x-3 hidden lg:block socials">
+                <a href="https://www.instagram.com/juvs.petals/"><i class="bi bi-instagram text-xl mr-2"></i></a>
+                <a href="https://www.facebook.com/JuvsPetalsSanDiego"><i class="bi bi-facebook text-2xl mr-2"></i></a>
+                <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU"><i class="bi bi-cart3 text-2xl mr-2"></i></a>
+            </section>
+
+        <!-- Mobile Menu Icon -->
+        <section class="space-x-3 block lg:hidden">
+                <button @click="open = !open" class="text-2xl text-white">
+                    <i x-bind:class="{ 'bi-list': !open, 'bi-x': open }"></i> <!-- Bootstrap Hamburger Icon -->
+                </button>
+            </section>
+        </nav>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div x-show="open" class="mobile-menu lg:hidden bg-fuschia text-white p-4" id="mobile-menu">
+            <!-- Place your mobile menu items here -->
+            <ul class="text-xl space-y-4">
                 <li><a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU">Shop</a></li>
-                <li><a href="/#getstarted">Services</a></li>
-                <!-- <li><a href="#">About</a></li> -->
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="https://www.instagram.com/juvs.petals/"><i class="bi bi-instagram text-xl mr-2"></i></a>
+                    <a href="https://www.facebook.com/JuvsPetalsSanDiego"><i class="bi bi-facebook text-2xl mr-2"></i></a>
+                    <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU"><i class="bi bi-cart3 text-2xl mr-2"></i></a>
+                </li>
             </ul>
-        </section>
-        <section class="space-x-3">
-            <a href="https://www.instagram.com/juvs.petals/"><i class="bi bi-instagram text-xl mr-2"></i></a>
-            <a href="https://www.facebook.com/JuvsPetalsSanDiego"><i class="bi bi-facebook text-2xl mr-2"></i></a>
-            <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU"><i class="bi bi-cart3 text-2xl mr-2"></i></a>
-
-        </section>
-    </nav>
+        </div>
+    </div>
     
     <!-- <div class="mt-4"> -->
     <div>
@@ -110,8 +135,8 @@
                 <h3 class="text-5xl font-bold text-fuschia">Discover the Blooms</h3><br>
                 <p class="text-lg">Embrace the beauty with our exquisite collection of handpicked flowers. Each blossom tells a story, and we can't wait to help you find the perfect one for your special occasion</p>
                 <div class="mt-6">
-                    <a href="#" class="bg-fuschia border-2 border-fuschia hover:bg-darkgray hover:border-darkgray text-white font-bold py-2 px-4 rounded-md">Learn More</a>
-                    <a href="#" class="border-2 border-fuschia hover:bg-darkgray hover:border-darkgray hover:text-white text-darkgray font-bold py-2 px-4 rounded-md ml-4">Shop Now</a>
+                    <a href="#contact" class="bg-fuschia border-2 border-fuschia hover:bg-darkgray hover:border-darkgray text-white font-bold py-2 px-4 rounded-md">Learn More</a>
+                    <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU" class="border-2 border-fuschia hover:bg-darkgray hover:border-darkgray hover:text-white text-darkgray font-bold py-2 px-4 rounded-md ml-4">Shop Now</a>
                 </div>
             </div>
             <div class="md:w-1/2 mt-6 md:mt-0">
@@ -121,32 +146,32 @@
     </section>
 
     <!-- Services -->
-    <section class="py-16 px-6 bg-fuschia text-white">
+    <section class="py-16 px-6 bg-fuschia text-white" id="services">
         <h3 class="text-3xl font-bold text-center">Experience Nature's Artistry!</h3>
         <section class="grid grid-cols-1 md:grid-cols-3 mt-10">
             <div class="text-center">
-                <img src="images/flower2.jpg" alt="flower 1" class="mx-auto object-cover w-40 h-40 rounded-full">
+                <img src="images/flower2.jpg" alt="flower 1" class="mx-auto object-cover" width="300" height="400">
                 <p class="mt-4 text-lg font-semibold">Welcome to Juv's Blossom Paradise!</p>
             </div>
             <div class="text-center">
-                <img src="images/flower3.jpg" alt="flower 2" class="mx-auto object-cover w-40 h-40 rounded-full">
+                <img src="images/flower3.jpg" alt="flower 2" class="mx-auto object-cover" width="300" height="400">
                 <p class="mt-4 text-lg font-semibold">Check out our Blooming Beauties!</p>
             </div>
             <div class="text-center">
-                <img src="images/flower4.jpg" alt="flower 3" class="mx-auto object-cover w-40 h-40 rounded-full">
+                <img src="images/flower-basket.jpg" alt="flower 3" class="mx-auto object-cover" style="width: 320px; height: 400px;">
                 <p class="mt-4 text-lg font-semibold">Discover the Floral Delights!</p>
             </div>
         </section>
     </section>
 
     <!-- Welcome -->
-    <section class="py-16 px-6 bg-gray">
+    <section class="py-16 px-6 bg-gray" id="about">
         <section class="flex flex-col md:flex-row items-center md:items-start justify-between">
             <div class="md:w-1/2 text-center md:text-left px-16 py-20">
                 <h3 class="text-3xl font-bold text-fuschia">Welcome to Our Bloomin' World!</h3><br>
                 <p class="text-lg">Indulge in the fragrance of our floral paradise. Our passion for flowers is as vibrant as a garden in full bloom. Let us sprinkle some flower power into your life and create moments that are as beautiful as a field of wildflowers.</p>
                 <div class="mt-6">
-                    <a href="#" class="bg-fuschia hover:bg-darkgray text-white font-bold  py-2 px-4 rounded-md">Learn More</a>
+                    <a href="#contact" class="bg-fuschia hover:bg-darkgray text-white font-bold  py-2 px-4 rounded-md">Learn More</a>
                 </div>
             </div>
             <div class="md:w-1/2 mt-6 md:mt-0">
@@ -167,8 +192,8 @@
             <img src="images/flower1.jpg" alt="cta image 4" class="object-cover w-full h-full pl-6">
         </section>
         <section class="text-center pt-12">
-            <a href="#" class="border-2 border-white hover:bg-darkgray hover:border-darkgray hover:text-white text-white font-bold py-2 px-4 rounded-md mx-2">Learn More</a>
-            <a href="#" class="border-2 border-white hover:bg-darkgray hover:border-darkgray hover:text-white text-white font-bold py-2 px-4 rounded-md mx-2">Socials</a>
+            <a href="#contact" class="border-2 border-white hover:bg-darkgray hover:border-darkgray hover:text-white text-white font-bold py-2 px-4 rounded-md mx-2">Learn More</a>
+            <a href="https://www.facebook.com/JuvsPetalsSanDiego" class="border-2 border-white hover:bg-darkgray hover:border-darkgray hover:text-white text-white font-bold py-2 px-4 rounded-md mx-2">Socials</a>
         </section>
     </section>
 
@@ -204,15 +229,16 @@
                 <ul>
                     <li class="flex items-left space-x-4 py-12 mb-2.5">
                         <i class="bi bi-geo-alt-fill text-fuschia text-3xl"></i>
-                        <p class="text-md text-darkgray font-bold text-2xl ">123 Demo Street New York, NY 12345</p>
+                        <p class="text-md text-darkgray font-bold text-2xl ">11745 Plaza Crest Ridge Road San Diego</p>
                     </li>
                     <li class="flex items-left space-x-4 text-fuschia py-12 mb-2">
                         <i class="bi bi-clock-fill text-3xl"></i>
-                        <p class="text-md text-darkgray font-bold  text-2xl ">Monday - Friday at 6:30am - 11:00pm</p>
+                        <p class="text-md text-darkgray font-bold  text-2xl ">Monday to Friday at 8:00am - 6:00 pm</p>
                     </li>
                     <li class="flex items-left space-x-4 text-fuschia py-12 ">
                         <i class="bi bi-telephone-fill text-3xl "></i>
-                        <p class="  text-darkgray font-bold text-2xl mb-12 ">email@example.com (555) 555-5555</p>
+                        <p class="  text-darkgray font-bold text-2xl mb-12 ">Juvspetals6@gmail.com
+</p>
                     </li>
                 </ul>
             </div>
