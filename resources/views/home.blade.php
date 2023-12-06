@@ -13,8 +13,6 @@
 
 <body class="font-tahoma">
 
-
-
      <!-- Navigation Bar -->
      <div x-data="{ open: false }">
         <nav class="flex flex-row justify-between items-center px-10 py-5 shadow bg-fuschia text-white">
@@ -126,27 +124,26 @@
     @endif
 
     </div>
-    <!-- Hero -->
-    <section class="bg-gray">
+<!-- Hero -->
+<section class="bg-gray flex items-center justify-center py-16">
+    <div class="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between">
+        <div class="md:w-1/2 text-center md:text-left px-6 md:px-16 mb-8 md:mb-0">
 
-        <section class="flex flex-col md:flex-row items-center md:items-start justify-between">
-            <div class="md:w-1/2 text-center md:text-left px-16 py-20">
-
-                <h3 class="text-5xl font-bold text-fuschia">Discover the Blooms</h3><br>
-                <p class="text-lg">Embrace the beauty with our exquisite collection of handpicked flowers. Each blossom tells a story, and we can't wait to help you find the perfect one for your special occasion</p>
-                <div class="mt-6">
-                    <a href="#contact" class="bg-fuschia border-2 border-fuschia hover:bg-darkgray hover:border-darkgray text-white font-bold py-2 px-4 rounded-md">Learn More</a>
-                    <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU" class="border-2 border-fuschia hover:bg-darkgray hover:border-darkgray hover:text-white text-darkgray font-bold py-2 px-4 rounded-md ml-4">Shop Now</a>
-                </div>
+            <h3 class="text-5xl font-bold text-fuschia mb-4">Discover the Blooms</h3>
+            <p class="text-lg mb-6">Embrace the beauty with our exquisite collection of handpicked flowers. Each blossom tells a story, and we can't wait to help you find the perfect one for your special occasion.</p>
+            <div class="flex flex-col md:flex-row">
+                <a href="#contact" class="bg-fuschia border-2 border-fuschia hover:bg-darkgray hover:border-darkgray text-white font-bold py-2 px-4 rounded-md mb-2 md:mb-0 md:mr-4">Learn More</a>
+                <a href="https://www.doordash.com/store/juvs-petals-san-diego-23504656/13531546/?fbclid=IwAR3A5J3r7saDAYnk16mfNjATfFY05m4UwU5ClsNB1GBt-2kJbszanUXyCqU" class="border-2 border-fuschia hover:bg-darkgray hover:border-darkgray hover:text-white text-darkgray font-bold py-2 px-4 rounded-md">Shop Now</a>
             </div>
-            <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="images/flower1.jpg" alt="flower hero" class="object-cover h-full w-full shadow-lg">
-            </div>
-        </section>
-    </section>
+        </div>
+        <div class="md:w-1/2">
+            <img src="images/flower1.jpg" alt="flower hero" class="object-cover w-full h-auto md:h-auto md:max-w-md shadow-lg md:mx-auto">
+        </div>
+    </div>
+</section>
 
     <!-- Services -->
-    <section class="py-16 px-6 bg-fuschia text-white" id="services">
+    <section class="py-16 px-6 bg-fuschia text-white">
         <h3 class="text-3xl font-bold text-center">Experience Nature's Artistry!</h3>
         <section class="grid grid-cols-1 md:grid-cols-3 mt-10">
             <div class="text-center">
@@ -165,7 +162,7 @@
     </section>
 
     <!-- Welcome -->
-    <section class="py-16 px-6 bg-gray" id="about">
+    <section class="px-6 bg-gray" id="about">
         <section class="flex flex-col md:flex-row items-center md:items-start justify-between">
             <div class="md:w-1/2 text-center md:text-left px-16 py-20">
                 <h3 class="text-3xl font-bold text-fuschia">Welcome to Our Bloomin' World!</h3><br>
@@ -175,12 +172,22 @@
                 </div>
             </div>
             <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="images/flower1.jpg" alt="flower hero" class="object-cover h-full w-full shadow-lg">
+                <img src="images/flower1.jpg" alt="flower hero" class="object-cover w-full h-auto md:h-auto md:max-w-md shadow-lg md:mx-auto">
             </div>
         </section>
     </section>
 
     @include('pricing')
+
+    <!-- Sample -->
+    <section class="py-16 pr-6 bg-gray">
+        <h1 class="text-3xl font-bold text-center text-fuschia">Experience the Beauty of Our Flower Services</h1>
+        <section class=" grid md:grid-cols-3 mt-10 place-items-center">
+            <img src="images/basic-service.jpg" alt="cta image 1" class="object-cover w-full h-full pl-6">
+            <img src="images/advanced-service.jpg" alt="cta image 2" class="object-cover w-full h-full pl-6">
+            <img src="images/intermediate-service.jpg" alt="cta image 3" class="object-cover w-full h-full pl-6">
+        </section>
+    </section>
 
     <!-- Call to Action -->
     <section class="py-16 pr-6 bg-fuschia">
@@ -209,19 +216,19 @@
                     <div class="flex space-x-4">
                         <div class="w-1/2">
                             <label for="first_name" class="text-sm">First Name</label>
-                            <input type="text" name="first_name" id="first_name" class="w-full p-2 border border-gray-300 rounded-md">
+                            <input type="text" name="first_name" id="first_name" class="w-full p-2 border border-gray-300 rounded-md" required>
                         </div>
                         <div class="w-1/2">
                             <label for="last_name" class="text-sm text-gray-600">Last Name</label>
-                            <input type="text" name="last_name" id="last_name" class="w-full p-2 border border-gray-300 rounded-md">
+                            <input type="text" name="last_name" id="last_name" class="w-full p-2 border border-gray-300 rounded-md" required>
                         </div>
                     </div>
                     <label for="email" class="text-sm text-gray-600">Email (Required)</label>
-                    <input type="email" name="email" id="email" class="w-full p-2 border border-gray-300 rounded-md">
+                    <input type="email" name="email" id="email" class="w-full p-2 border border-gray-300 rounded-md" required>
                     <label for="subject" class="text-sm text-gray-600">Subject (Required)</label>
-                    <input type="text" name="subject" id="subject" class="w-full p-2 border border-gray-300 rounded-md">
+                    <input type="text" name="subject" id="subject" class="w-full p-2 border border-gray-300 rounded-md" required>
                     <label for="message" class="text-sm text-gray-600">Message (Required)</label>
-                    <textarea name="message" id="message" cols="20" rows="4" class="w-full p-2 border border-gray-300 rounded-md "></textarea>
+                    <textarea name="message" id="message" cols="20" rows="4" class="w-full p-2 border border-gray-300 rounded-md"></textarea>
                     <button type="submit" class="bg-fuschia , hover:bg-fuschia text-white font-bold py-1.5 mt-4 px-4 rounded-md ">Send</button>
                 </form>
             </div>
@@ -237,8 +244,7 @@
                     </li>
                     <li class="flex items-left space-x-4 text-fuschia py-12 ">
                         <i class="bi bi-telephone-fill text-3xl "></i>
-                        <p class="  text-darkgray font-bold text-2xl mb-12 ">Juvspetals6@gmail.com
-</p>
+                        <p class="  text-darkgray font-bold text-2xl mb-12 ">Juvspetals6@gmail.com</p>
                     </li>
                 </ul>
             </div>
